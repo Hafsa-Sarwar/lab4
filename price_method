@@ -1,0 +1,9 @@
+def get_price(self, quantity):
+    try:
+        if quantity <= 0:
+            raise ValueError("Quantity can't be less than 1.")
+        return quantity * self.price
+
+    except ValueError as e:
+        print("Price calculation failed:", e)
+        return None
